@@ -16,9 +16,13 @@ class ProfileFragment : Fragment(R.layout.fragment_profile2) {
         super.onViewCreated(view, savedInstanceState)
         binding = FragmentProfile2Binding.bind(view)
         binding?.button?.setOnClickListener {
-            findNavController().navigate(R.id.action_profileFragment_to_infoFragment,InfoFragment.createBundle(ProfileFragment().javaClass.name))
+            findNavController().navigate(
+                R.id.action_profileFragment_to_infoFragment,
+                InfoFragment.createBundle(ProfileFragment().javaClass.name)
+            )
         }
     }
+
     override fun onDestroyView() {
         super.onDestroyView()
         binding = null

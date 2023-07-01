@@ -22,8 +22,6 @@ class InfoFragment : Fragment(R.layout.fragment_info) {
         binding?.button2?.setOnClickListener {
             findNavController().navigateUp()
         }
-
-
     }
     override fun onDestroyView() {
         super.onDestroyView()
